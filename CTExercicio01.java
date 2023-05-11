@@ -51,7 +51,7 @@ public abstract class Conta {
         return titular;
     }
     
-    public Cliente setTitular(Cliente titular) {
+    public void setTitular(Cliente titular) {
         this.titular = titular;
     }
     
