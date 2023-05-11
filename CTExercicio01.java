@@ -26,33 +26,19 @@ public class Cliente {
 
 public abstract class Conta {
     private int numero;
-    private Cliente titular;
+    private String nome_titular;
     protected double saldo;
     
-    public Conta(int numero, Cliente titular, double saldo) {
+    public Conta(int numero, String nome_titular, double saldo) {
         this.numero = numero;
-        this.titular = titular;
+        this.nome_titular = nome_titular;
         this.saldo = saldo;
     }
     
-    public Conta(int numero, Cliente titular) {
+    public Conta(int numero, String nome_titular) {
         this.numero = numero;
-        this.titular = titular;
+        this.nome_titular = nome_titular;
         saldo = 0;
-    }
-    
-    public Conta(int numero, String nomeTitular, String cpfTitular) {
-        this.numero = numero;
-        this.titular = new Cliente(nomeTitular, cpfTitular);
-        saldo = 0;
-    }
-    
-    public Cliente getTitular() {
-        return titular;
-    }
-    
-    public void setTitular(Cliente titular) {
-        this.titular = titular;
     }
     
     public abstract boolean sacar(double valor);
